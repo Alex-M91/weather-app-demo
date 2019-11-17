@@ -2,7 +2,7 @@ import json
 
 from flask import Flask
 
-import weather_app
+import weather
 
 # print(" >>> ", sys.path)
 
@@ -16,9 +16,9 @@ def hello():
 
 # A 2-a ruta care este verificate pe site doar cu /weather/ dupa ip
 
-@app.route("/weather/")
+@app.route("/weather-cluj/")
 def weather_route():
-    temp = json.dumps(weather_app.weather())
+    temp = json.dumps(weather.weather())
     return temp
 
 # A 3-a ruta
